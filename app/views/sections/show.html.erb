@@ -1,0 +1,23 @@
+<p>
+  <b>Nome:</b>
+  <%=h @section.nome %>
+</p>
+
+<p>
+  <b>Ramal:</b>
+  <%=h @section.ramal %>
+</p>
+
+<p>
+  <b>Bloco:</b>
+  <%=h @section.bloco %>
+</p>
+
+<p>
+  <b>Andar:</b>
+  <%=h @section.andar %>
+</p>
+
+
+<%= link_to 'Edit', edit_section_path(@section) %> |
+<%= link_to 'Back', sections_path %>

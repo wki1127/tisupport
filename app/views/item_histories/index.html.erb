@@ -1,0 +1,27 @@
+<h1>Listing item_histories</h1>
+
+<table>
+  <tr>
+    <th>Ticket</th>
+    <th>Status</th>
+    <th>Data</th>
+    <th>Hora</th>
+  </tr>
+
+<% @item_histories.each do |item_history| %>
+  <tr>
+    <td><%=h item_history.ticket_id %></td>
+    <td><%=h item_history.status_id %></td>
+    <td><%=h item_history.data %></td>
+    <td><%=h item_history.hora %></td>
+    <td><%= link_to 'Show', item_history %></td>
+    <td><%= link_to 'Edit', edit_item_history_path(item_history) %></td>
+    <td><%= link_to 'Destroy', item_history, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New item_history', new_item_history_path %>
+

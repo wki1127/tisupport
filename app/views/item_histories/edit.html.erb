@@ -1,0 +1,12 @@
+<h1>Editing item_history</h1>
+
+<% form_for(@item_history) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @item_history %> |
+<%= link_to 'Back', item_histories_path %>

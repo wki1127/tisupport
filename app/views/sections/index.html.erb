@@ -1,0 +1,26 @@
+<h1>Listing sections</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Ramal</th>
+    <th>Bloco</th>
+    <th>Andar</th>
+  </tr>
+
+<% @sections.each do |section| %>
+  <tr>
+    <td><%=h section.nome %></td>
+    <td><%=h section.ramal %></td>
+    <td><%=h section.bloco %></td>
+    <td><%=h section.andar %></td>
+    <td><%= link_to 'Show', section %></td>
+    <td><%= link_to 'Edit', edit_section_path(section) %></td>
+    <td><%= link_to 'Destroy', section, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New section', new_section_path %>

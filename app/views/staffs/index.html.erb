@@ -1,0 +1,28 @@
+<h1>Listing staffs</h1>
+
+<table>
+  <tr>
+    <th>Section</th>
+    <th>Nome</th>
+    <th>Senha</th>
+    <th>Email</th>
+    <th>Telefone</th>
+  </tr>
+
+<% @staffs.each do |staff| %>
+  <tr>
+    <td><%=h staff.section_id %></td>
+    <td><%=h staff.nome %></td>
+    <td><%=h staff.senha %></td>
+    <td><%=h staff.email %></td>
+    <td><%=h staff.telefone %></td>
+    <td><%= link_to 'Show', staff %></td>
+    <td><%= link_to 'Edit', edit_staff_path(staff) %></td>
+    <td><%= link_to 'Destroy', staff, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New staff', new_staff_path %>

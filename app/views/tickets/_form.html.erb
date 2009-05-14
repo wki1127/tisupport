@@ -1,0 +1,34 @@
+ <table>
+    <tr>
+      <td>
+        <%= f.label :Solicitante %>
+      </td>
+      <td>
+        <%= f.text_field :solicitante %>
+      </td>
+
+    </tr>
+    <tr>
+      <td>
+      <%= f.label :Departamento %>
+      </td>
+      <td>
+      <%= select("sections", :section_id, @section.collect {|s| [ s.nome, s.id ]} ) %>
+      </td>
+      <td>
+        <%= f.label :Ramal %>
+      </td>
+      <td>
+        <%= f.text_field :ramal %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= f.label :Prioridade %>
+      </td>
+      <td>
+        <%= f.text_field :prioridade %>
+      </td>
+    </tr>
+  </table>
+

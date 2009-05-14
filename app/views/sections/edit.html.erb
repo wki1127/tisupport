@@ -1,0 +1,28 @@
+<h1>Editing section</h1>
+
+<% form_for(@section) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </p>
+  <p>
+    <%= f.label :ramal %><br />
+    <%= f.text_field :ramal %>
+  </p>
+  <p>
+    <%= f.label :bloco %><br />
+    <%= f.text_field :bloco %>
+  </p>
+  <p>
+    <%= f.label :andar %><br />
+    <%= f.text_field :andar %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @section %> |
+<%= link_to 'Back', sections_path %>
